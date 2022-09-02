@@ -1,0 +1,14 @@
+configName: cloud_connect
+folderName: cloud_connect_dm320118
+format_version: v1.0
+frameworkPath: E:\Harmony3
+processor: ATSAMD21E18A
+projectName: cloud_connect_dm320118
+settings:
+  PackageFilter: aws_cloud;azure_rtos;bsp;core;crypto;cryptoauthlib;csp;csp_apps_sam_9x60;csp_apps_sam_a5d2;csp_apps_sam_d21_da1;csp_apps_sam_e70_s70_v70_v71;csp_apps_sam_l21;dev_packs;gfx;gfx_apps_sam_9x60;mc_apps_pic32mk;motor_control;MPLAB-Harmony-Reference-Apps;net;net_apps_sam_a5d2;net_apps_sam_e70_v71;quick_docs;usb;usb_apps_device;usb_apps_host;wireless_apps_winc1500;wireless_wifi;x2c
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  TRUSTZONE: 'false'
+  CMSISPath: .\dev_packs\arm\CMSIS\5.8.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: .\dev_packs\Microchip\SAMD21_DFP\3.4.116\samd21a\atdf\ATSAMD21E18A.atdf
