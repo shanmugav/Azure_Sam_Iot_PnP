@@ -1,5 +1,4 @@
-[
-  {
+{
     "@id": "dtmi:com:Microchip:CryptoAuthTrustPlatform_HR9;1",
     "@type": "Interface",
     "contents": [
@@ -11,7 +10,7 @@
         "displayName": {
           "en": "Heart Rate"
         },
-        "name": "HeartRate",
+        "name": "heartRate",
         "schema": "integer",
         "displayUnit": {
           "en": "BPM"
@@ -27,7 +26,7 @@
         "displayName": {
           "en": "Patient Name"
         },
-        "name": "PatientName",
+        "name": "patientName",
         "schema": "string",
         "writable": true,
         "displayUnit": {
@@ -44,7 +43,7 @@
         "displayName": {
             "en": "STATUS LED"
         },
-        "name": "LED_STATUS",
+        "name": "led_status",
         "schema": "dtmi:com:Microchip:CryptoAuthTrustPlatform_HR9:LedState;1",
         "writable": false
     },
@@ -57,12 +56,83 @@
             "en": "Sets interval to send telemetry in seconds"
         },
         "displayName": {
-            "en": "Set Telemetry Interval"
+            "en": "Telemetry Interval"
         },
         "name": "telemetryInterval",
         "schema": "integer",
         "unit": "second",
         "writable": true
+    },
+    {
+        "@type": "Property",
+        "description": {
+            "en": "Set Debug Level"
+        },
+        "displayName": {
+            "en": "Debug Level"
+        },
+        "name": "debugLevel",
+        "schema": {
+            "@type": "Enum",
+            "valueSchema": "integer",
+            "enumValues": [
+                {
+                    "name": "SEVERITY_NONE",
+                    "enumValue": 0,
+                    "displayName": {
+                        "en": "SEVERITY_NONE"
+                    }
+                },
+                {
+                    "name": "SEVERITY_ERROR",
+                    "enumValue": 1,
+                    "displayName": {
+                        "en": "SEVERITY_ERROR"
+                    }
+                },
+                {
+                    "name": "SEVERITY_WARN",
+                    "enumValue": 2,
+                    "displayName": {
+                        "en": "SEVERITY_WARN"
+                    }
+                },
+                {
+                    "name": "SEVERITY_DEBUG",
+                    "enumValue": 3,
+                    "displayName": {
+                        "en": "SEVERITY_DEBUG"
+                    }
+                },
+                {
+                    "name": "SEVERITY_INFO",
+                    "enumValue": 4,
+                    "displayName": {
+                        "en": "SEVERITY_INFO"
+                    }
+                },
+                {
+                    "name": "SEVERITY_TRACE",
+                    "enumValue": 5,
+                    "displayName": {
+                        "en": "SEVERITY_TRACE"
+                    }
+                }
+            ]
+        },
+        "writable": true
+    },
+    {
+        "@type": "Property",
+        "description": {
+            "en": "IP Address"
+        },
+        "displayName": {
+            "en": "IP Address"
+        },
+        "name": "ipAddress",
+        "schema": "string",
+        "writable": false
     },
     {
       "@type": "Command",
@@ -222,5 +292,4 @@
       "dtmi:iotcentral:context;2",
       "dtmi:dtdl:context;2"
     ]
-  }
-]
+}
