@@ -31,9 +31,17 @@ The following development boards manufactured by Microchip Technology are requir
 
 2. Download/clone the repo located at https://github.com/Microchip-MPLAB-Harmony/wireless_wifi
 
-3. Launch a command line window (e.g. PowerShell or Command Prompt) and navigate to the `wireless_wifi\utilities\wifi\winc` folder
+3. Press the `RESET` button on the SAMD21 Xplained Pro board.
 
-4. Execute the following on the command line. The COM port parameter corresponds to the Virtual COM port associated with the USB connection of the SAMD21 Xplained Pro (e.g. <COM_PORT> = COM9):
+4. Determine the Virtual COM port number associated with the USB connection of the SAMD21 Xplained Pro board. For example, you can use the Windows Device Manager to find the `EDBG Virtual COM Port` found under the `Ports (COM & LPT)` category
+
+    <img src="./win10_device_manager.jpg" width=300 />
+
+5. Launch a command line window (e.g. PowerShell or Command Prompt)
+
+6. Navigate to the folder `\wireless_wifi\utilities\wifi\winc` (in the local clone of the repository)
+
+7. Execute the following on the command line (e.g. <COM_PORT> = COM9):
     ```bash
     winc_flash_tool.cmd /p <COM_PORT> /d winc1500 /v 19.7.7 /e /x /i prog /w
     ```
@@ -91,12 +99,13 @@ found certificate: Amazon Root CA 1
 found certificate: Baltimore CyberTrust Root
 found certificate: DigiCert High Assurance EV Root CA
 found certificate: DigiCert SHA2 High Assurance Server CA
+found certificate: DigiCert Global Root G2
 found certificate: Entrust Root Certification Authority
 found certificate: GlobalSign Root CA
 found certificate: ISRG Root X1
 found certificate: QuoVadis Root CA 2
 found certificate: VeriSign Class 3 Public Primary Certification Authority - G5
-written 3268 of 4096 bytes to image (80%)
+written 3572 of 4096 bytes to image (88%)
 processing region '[tls certificates]'
 written 0 of 8192 bytes to image (0%)
 processing region '[http files]'
